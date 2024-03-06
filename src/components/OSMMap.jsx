@@ -1,6 +1,7 @@
 import { useRef, useEffect } from 'react';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
+import customMarkerIcon from '../assets/images/marker.png';
 
 const OSMMap = () => {
   const mapRef = useRef(null);
