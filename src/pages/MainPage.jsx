@@ -15,6 +15,7 @@ function MainPage() {
         backgroundSize: "cover",
         backgroundAttachment: "fixed", 
         height: "100vh",
+        minHeight:"1000px"
         
       }}
     >
