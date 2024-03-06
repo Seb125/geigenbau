@@ -10,12 +10,18 @@ const OSMMap = () => {
     //if (!mapRef.current) return;
 
     const map = L.map(mapRef.current).setView([52.51252421927479, 13.271941597183538], 13); // Koordinaten für die Anfangsposition der Karte
+    
+    const customIcon = L.icon({
+      iconUrl: customMarkerIcon,
+      iconSize: [32, 32], // Set the size of your custom icon
+      iconAnchor: [16, 32], // Adjust the anchor point if needed
+    });
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; OpenStreetMap contributors'
     }).addTo(map);
 
-    const marker = L.marker([52.51252421927479, 13.271941597183538]).addTo(map);
+    const marker = L.marker([52.51252421927479, 13.271941597183538], { icon: customIcon }).addTo(map);
 
     return () => {
       map.remove(); // Entfernen der Karte, wenn die Komponente entladen wird
