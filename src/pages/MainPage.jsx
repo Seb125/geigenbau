@@ -1,11 +1,11 @@
-import image from "../assets/images/image.jpg";
+import image from "../assets/images/geigenbau-werkstatt.jpg";
 import OSMMap from "../components/OSMMap";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 function MainPage() {
   return (
-    <div className="position-relative" style={{height: "100vh"}}>
+    <div className="position-relative" >
     <Header />
     
     <div
@@ -15,34 +15,54 @@ function MainPage() {
         backgroundSize: "cover",
         backgroundAttachment: "fixed", 
         height: "100vh",
-        minHeight:"1000px"
+        minHeight:"1200px"
         
       }}
     >
       <div className="overlay"></div>
-      <div className="d-flex flex-row justify-content-center">
-        <div className="d-flex flex-column align-items-center text-container m-5 ">
-          <h2>Schwarz Duscheleit Geigenbau</h2>
-          <h2>Herzlich Willkommen</h2>
-          <p>Wir freuen uns über Ihren Besuch oder eine Nachricht!</p>
-          <h2>Öffnungszeiten</h2>
-          <p>
-            Montags 13-18 Uhr. Dienstag-Freitag 11-18 Uhr. <br />
-            Samstag nach Vereinbarung
-          </p>
-          <h2>Kontakt</h2>
-          <p>
-            E-Mail: schwarz.duscheleit@arcor.de <br />
-            Tel: 030 3015564 <br />
-            Halmstrasse 2 <br />
-            14050 Berlin
-          </p>
+      <div className="d-flex flex-row justify-content-center ">
+        <div className="d-flex flex-column align-items-center m-5 position-relative text-container">
+          <div className="d-flex flex-md-row flex-column align-items-center mb-3">
+          <h1 className="me-md-2">Schwarz Duscheleit</h1>
+          <h1>Geigenbau</h1>
+          </div>
+          <div className="d-flex flex-column align-items-center">
+            <h2>Herzlich Willkommen</h2>
+            <span>Wir freuen uns über Ihren Besuch</span>
+            <span>oder eine Nachricht!</span>
+          </div>
+          <br></br>
+          <div className="d-flex flex-column align-items-center">
+            <h2>Öffnungszeiten</h2>
+            <span>
+              Montags 13-18 Uhr. 
+              </span>
+              <span>
+              Dienstag-Freitag 11-18 Uhr.
+              </span>
+            <span>Samstag nach Vereinbarung</span>
+          </div>
+          <br></br>
+          <div className="d-flex flex-column align-items-center">
+            <h2>Kontakt</h2>
+            <div className="d-flex flex-row">
+            <span className="d-md-inline d-none">Email:&nbsp;</span> 
+            <span> schwarz.duscheleit@arcor.de</span>
+            </div>
+            <span>Tel: 030 3015564</span>
+            <span>Halmstrasse 2</span>
+            <span>14050 Berlin</span>
+          </div>
         </div>
       </div>
-      <div className="d-flex flex-row justify-content-center" >
+      <div className="d-flex flex-row justify-content-center mt-5" >
         <OSMMap />
+        
       </div>
+      <div className="position-relative mt-5">
       <Footer />
+      </div>
+      
     </div>
     
     

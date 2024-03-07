@@ -24,12 +24,16 @@ const OSMMap = () => {
 
     const marker = L.marker([52.51252421927479, 13.271941597183538], { icon: customIcon }).addTo(map);
 
+    // Popup with the address
+    const addressPopup = L.popup().setContent("<p>Halmstrasse 2, 14050 Berlin</p>");
+    marker.bindPopup(addressPopup).openPopup();
+
     return () => {
       map.remove(); // Entfernen der Karte, wenn die Komponente entladen wird
     };
   }, []);
 
-  return <div ref={mapRef} style={{ height: "300px", width: "800px"}} className='mb-5'/>;
+  return <div ref={mapRef} style={{ height: "300px", width: "800px", zIndex: 5}} className='mb-5'/>;
 };
 
 export default OSMMap;

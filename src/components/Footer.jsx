@@ -3,10 +3,11 @@ function Footer() {
   return (
     
  
-<section className=" container-fluid">
+<section className=" container-fluid ">
 
-  <div className="d-flex flex-row justify-content-around">
-  <a className="" href="/impressum">Impressum</a>
+  <div className="d-flex flex-row justify-content-center" style={{zIndex: 5}}>
+  <a className="footer me-5 text-sm" href="/impressum">Impressum</a>
+  <a className="footer" href="/impressum">Datenschutzerklärung</a>
     
 
   </div>
