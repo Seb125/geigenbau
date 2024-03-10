@@ -20,18 +20,19 @@ function MainPage() {
     >
       <div className="overlay"></div>
       <div className="d-flex flex-row justify-content-center ">
-        <div className="d-flex flex-column align-items-center m-5 position-relative text-container">
-          <div className="d-flex flex-md-row flex-column align-items-center mb-3">
+        <div className="d-flex flex-column align-items-center m-5 position-relative text-container p-5" style={{width: "50%"}}>
+        <div className="box-overlay bg-body-tertiary"></div>
+          <div className="d-flex flex-md-row flex-column align-items-center mb-3 position-relative">
           <h1 className="me-md-2">Schwarz Duscheleit</h1>
           <h1>Geigenbau</h1>
           </div>
-          <div className="d-flex flex-column align-items-center">
+          <div className="d-flex flex-column align-items-center position-relative">
             <h2>Herzlich Willkommen</h2>
             <span>Wir freuen uns über Ihren Besuch</span>
             <span>oder eine Nachricht!</span>
           </div>
           <br></br>
-          <div className="d-flex flex-column align-items-center">
+          <div className="d-flex flex-column align-items-center position-relative">
             <h2>Öffnungszeiten</h2>
             <span>
               Montags 13-18 Uhr. 
@@ -42,7 +43,7 @@ function MainPage() {
             <span>Samstag nach Vereinbarung</span>
           </div>
           <br></br>
-          <div className="d-flex flex-column align-items-center">
+          <div className="d-flex flex-column align-items-center position-relative">
             <h2>Kontakt</h2>
             <div className="d-flex flex-row">
             <span className="d-md-inline d-none">Email:&nbsp;</span> 

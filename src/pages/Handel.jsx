@@ -22,18 +22,27 @@ function Handel() {
               <h1 className="me-md-2">Schwarz Duscheleit</h1>
               <h1>Geigenbau</h1>
             </div>
-            <div className="d-flex flex-column align-items-center">
+            <div className="d-flex flex-column align-items-center mb-5">
               <h2>Handel</h2>
             </div>
 
-            <hr></hr>
+            <div className="position-relative text-container" >
+              <hr
+                className=""
+                style={{
+                  color: "white",
+                  backgroundColor: "white",
+                  height: 5,
+                }}
+              />
+            </div>
 
             <div
-              className="d-flex flex-row justify-content-center position-relative"
-              style={{ width: "60%" }}
+              className="d-flex flex-row justify-content-center position-relative mt-5 mb-5"
+              style={{ width: "80%" }}
             >
               <div>
-                <img src={handel} style={{ width: "80%" }} />
+                <img src={handel} style={{ width: "90%" }} />
               </div>
               <div className="d-flex flex-column justify-content-center">
                 <span>
@@ -42,13 +51,23 @@ function Handel() {
                   werden und gegebenenfalls in den eigenen Räumen ausprobiert
                   werden.
                 </span>
+                <br></br>
                 <span>
                   Saiten und weiteres Zubehör sind ebenfalls erhältlich.
                 </span>
               </div>
             </div>
 
-            <hr></hr>
+            <div className="position-relative text-container mb-5" >
+              <hr
+                className=""
+                style={{
+                  color: "white",
+                  backgroundColor: "white",
+                  height: 5,
+                }}
+              />
+            </div>
 
             <div className="position-relative mt-5">
               <Footer />

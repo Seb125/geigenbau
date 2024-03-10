@@ -4,7 +4,7 @@ import logo from "../assets/images/logo.png";
 function Header() {
   return (
     <>
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
+    <nav className="navbar navbar-expand-lg bg-body-tertiary text-decoration-none">
   <div className="container-fluid">
   <a className="nav-link active me-4 ms-3" href="/"><img src={logo} className="img-thumbnail img-fluid" style={{width: "80px"}} alt="Schwarz Duscheleit Geigenbau"/></a>
     

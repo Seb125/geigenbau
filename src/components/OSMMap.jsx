@@ -33,7 +33,7 @@ const OSMMap = () => {
     };
   }, []);
 
-  return <div ref={mapRef} style={{ height: "300px", width: "800px", zIndex: 5}} className='mb-5'/>;
+  return <div ref={mapRef} style={{ height: "300px", width: "800px", zIndex: 5, borderRadius: "20px"}} className='mb-5'/>;
 };
 
 export default OSMMap;

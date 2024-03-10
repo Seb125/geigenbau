@@ -1,7 +1,12 @@
 
 function Reparatur() {
   return (
-    <div>Reparatur</div>
+    <div>
+     <hr  className="" style={{
+            color: "red",
+            backgroundColor: "red",
+            height: 5
+        }}/>Reparatur</div>
   )
 }
 
