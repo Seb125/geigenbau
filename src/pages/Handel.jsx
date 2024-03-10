@@ -15,11 +15,11 @@ function Handel() {
           minHeight: "1200px",
         }}
       >
-        <div className="overlay"></div>
+        <div className="overlay-two"></div>
         <div className="d-flex flex-row justify-content-center ">
-          <div className="d-flex flex-column align-items-center m-5 position-relative text-container">
+          <div className="d-flex flex-column align-items-center m-5 position-relative text-container-two">
             <div className="d-flex flex-md-row flex-column align-items-center mb-3">
-              <h1 className="me-md-2">Schwarz Duscheleit</h1>
+              <h1 className="me-md-2 ">Schwarz Duscheleit</h1>
               <h1>Geigenbau</h1>
             </div>
             <div className="d-flex flex-column align-items-center mb-5">
@@ -30,8 +30,8 @@ function Handel() {
               <hr
                 className=""
                 style={{
-                  color: "white",
-                  backgroundColor: "white",
+                  color: "rgb(0, 0, 0)",
+                  backgroundColor: "rgb(15, 15, 15)",
                   height: 5,
                 }}
               />
@@ -62,8 +62,8 @@ function Handel() {
               <hr
                 className=""
                 style={{
-                  color: "white",
-                  backgroundColor: "white",
+                  color: "black",
+                  backgroundColor: "black",
                   height: 5,
                 }}
               />
