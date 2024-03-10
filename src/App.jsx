@@ -7,7 +7,7 @@ import Mietinstrumente from './pages/Mietinstrumente';
 import Reparatur from './pages/Reparatur';
 import Neubau from './pages/Neubau';
 import Kontakt from './pages/Kontakt';
-import HeaderFoooterLayout from './components/HeaderFoooterLayout';
+import HeaderLayout from "./components/HeaderLayout";
 import Impressum from './pages/Impressum';
 
 function App() {
@@ -18,14 +18,14 @@ function App() {
    
     <Routes>
         
-        <Route path='/' element={<MainPage/>}/>
+        <Route path='/' element={<HeaderLayout><MainPage/></HeaderLayout>}/>
         <Route path='/impressum' element={<Impressum/>}/>
 
-        <Route path='/handel' element={<HeaderFoooterLayout><Handel /></HeaderFoooterLayout>}/>
-        <Route path='/mietinstrumente' element={<HeaderFoooterLayout><Mietinstrumente/></HeaderFoooterLayout>}/>
-        <Route path='/reparatur' element={<HeaderFoooterLayout><Reparatur/></HeaderFoooterLayout>}/>
-        <Route path='/neubau' element={<HeaderFoooterLayout><Neubau/></HeaderFoooterLayout>}/>
-        <Route path='/kontakt' element={<HeaderFoooterLayout><Kontakt/></HeaderFoooterLayout>}/>
+        <Route path='/handel' element={<HeaderLayout><Handel /></HeaderLayout>}/>
+        <Route path='/mietinstrumente' element={<HeaderLayout><Mietinstrumente/></HeaderLayout>}/>
+        <Route path='/reparatur' element={<HeaderLayout><Reparatur/></HeaderLayout>}/>
+        <Route path='/neubau' element={<HeaderLayout><Neubau/></HeaderLayout>}/>
+        <Route path='/kontakt' element={<HeaderLayout><Kontakt/></HeaderLayout>}/>
       
     </Routes>
    </div>
