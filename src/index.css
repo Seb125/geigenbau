@@ -52,3 +52,47 @@
   color: rgb(0, 0, 0);
   font-size: 0.8rem;
 }
+
+.background-container {
+  
+    background-image: url("./assets/images/geigenbau-werkstatt.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 1000px;
+
+}
+
+#background-container-small {
+    background-image: url("./assets/images/geigenbau-werkstatt.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 1000px;
+}
+
+.horizontal-picture {
+  width: 500px;
+}
+
+.text-box {
+  width: 50%;
+  margin-top: 100px;
+  margin-bottom: 100px
+}
+
+@media (max-width: 400px) {
+  .background-container {
+    min-height: 1300px;
+  }
+  .horizontal-picture {
+    width: 300px;
+    margin-bottom: 50px;
+  }
+  .text-box {
+    width: 100%;
+  }
+  #background-container-small {
+    min-height: 1000px;
+  }
+}
+
+

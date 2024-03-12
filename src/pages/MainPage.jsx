@@ -20,7 +20,7 @@ function MainPage() {
     >
       <div className="overlay"></div>
       <div className="d-flex flex-row justify-content-center ">
-        <div className="d-flex flex-column align-items-center position-relative text-container p-5" style={{width: "50%", marginTop: "100px", marginBottom: "100px"}}>
+        <div className="d-flex flex-column align-items-center position-relative text-box p-5">
         <div className="box-overlay bg-body-tertiary"></div>
           <div className="d-flex flex-md-row flex-column align-items-center mb-3 position-relative">
           <h1 className="me-md-2">Schwarz Duscheleit</h1>

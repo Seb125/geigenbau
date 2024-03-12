@@ -5,16 +5,7 @@ import Footer from "../components/Footer";
 function Handel() {
   return (
     <div className="position-relative">
-      <div
-        className="container-fluid bg-no-repeat bg-cover position-relative"
-        style={{
-          backgroundImage: `url(${image})`,
-          backgroundSize: "cover",
-          backgroundAttachment: "fixed",
-          height: "100vh",
-          minHeight: "1200px",
-        }}
-      >
+      <div className="container-fluid bg-no-repeat bg-cover position-relative background-container">
         <div className="overlay-two"></div>
         <div className="d-flex flex-row justify-content-center ">
           <div className="d-flex flex-column align-items-center m-5 position-relative text-container-two">
@@ -26,7 +17,7 @@ function Handel() {
               <h2>Handel</h2>
             </div>
 
-            <div className="position-relative text-container" >
+            <div className="position-relative text-container">
               <hr
                 className=""
                 style={{
@@ -38,18 +29,21 @@ function Handel() {
             </div>
 
             <div
-              className="d-flex flex-row justify-content-center position-relative mt-5 mb-5"
+              className="d-flex flex-column flex-md-row justify-content-center align-items-center position-relative mt-5 mb-5"
               style={{ width: "80%" }}
             >
-              <div>
-                <img src={handel} style={{ width: "90%" }} />
+              <div className="me-md-5 mb-5 mb-md-0">
+                <img src={handel} style={{ width: "300px" }} />
               </div>
               <div className="d-flex flex-column justify-content-center">
                 <span>
                   Wir bieten Streichinstrumente und Bögen vom Schülerinstrument
-                  bis zum Meisterinstrument an. Diese können bei uns angespielt
-                  werden und gegebenenfalls in den eigenen Räumen ausprobiert
-                  werden.
+                  bis zum Meisterinstrument an.
+                </span>
+                <span>
+                  <br></br>
+                  Diese können bei uns angespielt werden und gegebenenfalls in
+                  den eigenen Räumen ausprobiert werden.
                 </span>
                 <br></br>
                 <span>
@@ -58,7 +52,7 @@ function Handel() {
               </div>
             </div>
 
-            <div className="position-relative text-container mb-5" >
+            <div className="position-relative text-container mb-5">
               <hr
                 className=""
                 style={{
