@@ -79,9 +79,10 @@
   margin-bottom: 100px
 }
 
-@media (max-width: 400px) {
+@media (max-width: 370px) {
   .background-container {
     min-height: 1300px;
+    background-attachment: fixed;
   }
   .horizontal-picture {
     width: 300px;
