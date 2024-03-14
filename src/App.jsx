@@ -9,6 +9,7 @@ import Neubau from './pages/Neubau';
 import Kontakt from './pages/Kontakt';
 import HeaderLayout from "./components/HeaderLayout";
 import Impressum from './pages/Impressum';
+import Test from "./pages/test";
 
 function App() {
   const [count, setCount] = useState(0)
@@ -20,6 +21,7 @@ function App() {
         
         <Route path='/' element={<HeaderLayout><MainPage/></HeaderLayout>}/>
         <Route path='/impressum' element={<Impressum/>}/>
+        <Route path='/test' element={<Test/>}/>
 
         <Route path='/handel' element={<HeaderLayout><Handel /></HeaderLayout>}/>
         <Route path='/mietinstrumente' element={<HeaderLayout><Mietinstrumente/></HeaderLayout>}/>
