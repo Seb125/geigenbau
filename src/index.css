@@ -62,7 +62,7 @@
 
 }
 
-#background-container-small {
+.background-container-small {
     background-image: url("./assets/images/geigenbau-werkstatt.jpg");
     background-size: cover;
     background-attachment: fixed;
@@ -91,7 +91,7 @@
   .text-box {
     width: 100%;
   }
-  #background-container-small {
+  .background-container-small {
     min-height: 1000px;
   }
 }

@@ -1,5 +1,4 @@
-import image from "../assets/images/geigenbau-werkstatt.jpg";
-import handel from "../assets/images/mietinstrumente.jpg";
+import mietinstrumente from "../assets/images/mietinstrumente.jpg";
 import Footer from "../components/Footer";
 
 function Handel() {
@@ -33,8 +32,8 @@ function Handel() {
               className="d-flex flex-column flex-md-row justify-content-center align-items-center position-relative mt-5 mb-5"
               style={{ width: "80%" }}
             >
-              <div className="me-0 memd-5">
-                <img src={handel} className="horizontal-picture" />
+              <div className="me-0 me-md-5">
+                <img src={mietinstrumente} className="horizontal-picture" />
               </div>
               <div className="d-flex flex-column justify-content-center">
                 <span>

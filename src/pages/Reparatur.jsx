@@ -1,12 +1,11 @@
-import image from "../assets/images/geigenbau-werkstatt.jpg";
-import handel from "../assets/images/reparatur.jpg";
+import reparatur from "../assets/images/reparatur.jpg";
 import Footer from "../components/Footer";
 
 function Handel() {
   return (
     <div className="position-relative">
       <div
-        className="container-fluid bg-no-repeat bg-cover position-relative" id="background-container-small">
+        className="container-fluid bg-no-repeat bg-cover position-relative background-container-small">
         <div className="overlay-two"></div>
         <div className="d-flex flex-row justify-content-center ">
           <div className="d-flex flex-column align-items-center m-5 position-relative text-container-two">
@@ -34,7 +33,7 @@ function Handel() {
               style={{ width: "80%" }}
             >
               <div className="me-0 me-md-5">
-                <img src={handel} className="horizontal-picture" />
+                <img src={reparatur} className="horizontal-picture" />
               </div>
               <div className="d-flex flex-column justify-content-center">
                 <span>In unserer Werkstatt werden</span>
