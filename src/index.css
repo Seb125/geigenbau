@@ -79,6 +79,12 @@
   margin-bottom: 100px
 }
 
+#image {
+  position: absolute;
+  left: 600px;
+}
+
+
 @media (max-width: 430px) {
   .background-container {
     min-height: 1300px;
@@ -97,3 +103,77 @@
 }
 
 
+
+
+.carousel {
+  position: relative;
+  max-width: 600px;
+  max-height: 800px;
+  overflow: hidden;
+}
+
+.carousel__slides {
+  display: flex; /* Ensure the slides are displayed in a row */
+}
+
+.carousel__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 1.5rem;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  z-index: 1;
+  transition: background-color 0.3s;
+}
+.carousel__btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.carousel__btn--prev {
+  left: 0;
+}
+.carousel__btn--next {
+  right: 0;
+}
+.carousel__img {
+  flex: 0 0 auto; /* Prevent images from stretching */
+  width: 100%; /* Ensure each image takes up the full width of the container */
+  height: auto; /* Maintain aspect ratio */
+  transition: transform 0.3s ease-in-out;
+}
+
+.carousel__img:hover {
+  transform: scale(1.05);
+}
+
+
+.myGrid {
+  display: grid;
+  place-items: center;
+  width: 60%;
+}
+
+/* 
+.carousel_two {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel__track_two {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel__img_two {
+  flex: 0 0 100%;
+  height: auto;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.carousel__img.active {
+  opacity: 1;
+} */
