@@ -3,7 +3,7 @@ import CarouselIndicators from './CarouselIndicators';
 
 
 
-function Carousel ({ images, interval = 3000 }) {
+function Carousel ({ images, interval = 6000 }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [transitionEnabled, setTransitionEnabled] = useState(false);
 
@@ -47,7 +47,7 @@ function Carousel ({ images, interval = 3000 }) {
         className="carousel__slides"
         style={{
           transform: `translateX(-${activeIndex * 100}%)`,
-          transition: transitionEnabled ? 'transform 0.5s ease-in-out' : 'none'
+          transition: transitionEnabled ? 'transform 0.9s ease-in-out' : 'none'
         }}
         onTransitionEnd={handleTransitionEnd}
       >
