@@ -12,12 +12,12 @@ function Test() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      // emailjs.init(import.meta.env.VITE_EMAIL_USER_ID);
-      // const response = await emailjs.send(import.meta.env.VITE_EMAIL_SERVICE_ID, import.meta.env.VITE_EMAIL_TEMPLATE_ID,
-      //   {to_email:"schwarz.duscheleit@hotmail.de",
-      //   from_name: from,
-      // message: text});
-      // console.log(response);
+      emailjs.init(import.meta.env.VITE_EMAIL_USER_ID);
+      const response = await emailjs.send(import.meta.env.VITE_EMAIL_SERVICE_ID, import.meta.env.VITE_EMAIL_TEMPLATE_ID,
+        {to_email:"schwarz.duscheleit@arcor.de",
+        subject: "Email von " + mail,
+      message: message});
+      console.log(response);
 
       console.log("Email sent successfully");
     } catch (error) {
@@ -74,7 +74,7 @@ function Test() {
               <span>Halmstrasse 2</span>
               <span>14050 Berlin</span>
             </div>
-            <form
+            <form onSubmit={handleSubmit}
               className=" d-flex flex-column position-relative needs-validation col-md-8 col-lg-6 col-xl-4"
               noValidate
             >
