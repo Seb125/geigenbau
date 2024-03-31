@@ -3,25 +3,38 @@ import handel from "../assets/images/handel.jpg";
 import Footer from "../components/Footer";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
+import Form from "../components/Form";
+import Spinner from "../components/Spinner";
 
 function Test() {
   const [name, setName] = useState("");
   const [mail, setMail] = useState("");
   const [message, setMessage] = useState("");
+  const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      setLoading(true);
       emailjs.init(import.meta.env.VITE_EMAIL_USER_ID);
-      const response = await emailjs.send(import.meta.env.VITE_EMAIL_SERVICE_ID, import.meta.env.VITE_EMAIL_TEMPLATE_ID,
-        {to_email:"schwarz.duscheleit@hotmail.de",
-        subject: "Email von " + mail,
-      message: message});
+      const response = await emailjs.send(
+        import.meta.env.VITE_EMAIL_SERVICE_ID,
+        import.meta.env.VITE_EMAIL_TEMPLATE_ID,
+        {
+          to_email: "schwarz.duscheleit@arcor.de",
+          subject: "Email von " + mail,
+          message: message,
+        }
+      );
       console.log(response);
 
       console.log("Email sent successfully");
     } catch (error) {
       console.log(error);
+    } finally {
+      setLoading(false);
+      setSent(true);
     }
   };
 
@@ -74,77 +87,22 @@ function Test() {
               <span>Halmstrasse 2</span>
               <span>14050 Berlin</span>
             </div>
-            <form onSubmit={handleSubmit}
-              className=" d-flex flex-column position-relative needs-validation col-md-8 col-lg-6 col-xl-4"
-              noValidate
-            >
-              <div className="form-group mb-3">
-                <input
-                  type="text"
-                  className="form-control"
-                  id="validationCustom01"
-                  placeholder="Name"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  required
-                />
-                <div className="valid-feedback"> </div>
-                <div className="invalid-feedback">
-                  Bitte geben Sie Ihren Namen ein
-                </div>
-              </div>
-              <div className="form-group mb-3">
-                <input
-                  type="email"
-                  className="form-control"
-                  id="validationCustom02"
-                  placeholder="E-Mail"
-                  value={mail}
-                  onChange={(e) => setMail(e.target.value)}
-                  required
-                />
+            {sent ? (
+              <h2>Deine Nachricht wurde gesendet!</h2>
+            ) : loading ? (
+              <Spinner />
+            ) : (
+              <Form
+                name={name}
+                mail={mail}
+                message={message}
+                setName={setName}
+                setMail={setMail}
+                setMessage={setMessage}
+                handleSubmit={handleSubmit}
+              />
+            )}
 
-                <div className="valid-feedback"></div>
-                <div className="invalid-feedback">
-                  Bitte geben Sie eine valide Email Adresse an
-                </div>
-              </div>
-              <div className="form-group mb-4">
-                <textarea
-                  className="form-control"
-                  id="validationTextarea"
-                  placeholder="Nachricht"
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                  required
-                ></textarea>
-                <div className="valid-feedback"></div>
-                <div className="invalid-feedback">
-                  Bitte geben Sie hier Ihre Nachricht ein
-                </div>
-              </div>
-              <div className="form-group form-check">
-                <input
-                  className="form-check-input"
-                  type="checkbox"
-                  value=""
-                  id="invalidCheck"
-                  required
-                />
-                <label className="form-check-label" htmlFor="invalidCheck">
-                  Datenschutzerklärung zustimmen
-                </label>
-                <div className="invalid-feedback">
-                  Sie müssen vor dem Absenden zustimmen.
-                </div>
-              </div>
-              <button
-                className="btn btn-primary align-self-center mt-4 mb-5"
-                type="submit"
-              >
-                Absenden
-              </button>
-            </form>
             <div className="position-relative mt-5">
               <Footer />
             </div>

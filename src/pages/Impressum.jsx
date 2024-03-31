@@ -1,8 +1,12 @@
 
 
 function Impressum() {
+  console.log(import.meta.env.VITE_TEST)
   return (
-    <div>{import.meta.env.TEST}</div>
+    <div>
+    <h2>Mista</h2>
+    <h2>{import.meta.env.VITE_TEST}</h2>
+    </div>
   )
 }
 
