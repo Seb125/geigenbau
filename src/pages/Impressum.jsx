@@ -2,7 +2,7 @@
 
 function Impressum() {
   return (
-    <div>Impressum</div>
+    <div>{import.meta.env.TEST}</div>
   )
 }
 
