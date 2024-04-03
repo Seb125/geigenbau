@@ -1,5 +1,5 @@
 function Form(props) {
-  const { name, mail, message, setName, setMail, setMessage, handleSubmit } =
+  const { name, mail, message, honeypot, setName, setMail, setMessage, setHoneypot, handleSubmit } =
     props;
   return (
     <form
@@ -49,6 +49,14 @@ function Form(props) {
         <div className="invalid-feedback">
           Bitte geben Sie hier Ihre Nachricht ein
         </div>
+        <input
+          type="text"
+          className="form-control"
+          id="info"
+          placeholder="info"
+          style={{display: "none"}}
+          value={honeypot}
+        />
       </div>
       <div className="form-group form-check">
         <input

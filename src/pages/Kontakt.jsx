@@ -10,19 +10,22 @@ function Test() {
   const [name, setName] = useState("");
   const [mail, setMail] = useState("");
   const [message, setMessage] = useState("");
+  const [honeypot, setHoneypot] = useState(false);
   const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       setLoading(true);
+      if(honeypot !== false) {
       emailjs.init(import.meta.env.VITE_EMAIL_USER_ID);
       const response = await emailjs.send(
         import.meta.env.VITE_EMAIL_SERVICE_ID,
         import.meta.env.VITE_EMAIL_TEMPLATE_ID,
         {
-          to_email: "schwarz.duscheleit@arcor.de",
+          to_email: "schwarz.duscheleit@hotmail.de",
           subject: "Email von " + mail,
           message: message,
         }
@@ -30,11 +33,13 @@ function Test() {
       console.log(response);
 
       console.log("Email sent successfully");
+      }
     } catch (error) {
       console.log(error);
     } finally {
       setLoading(false);
       setSent(true);
+      setHoneypot(false);
     }
   };
 
@@ -96,9 +101,11 @@ function Test() {
                 name={name}
                 mail={mail}
                 message={message}
+                honeypot={honeypot}
                 setName={setName}
                 setMail={setMail}
                 setMessage={setMessage}
+                setHoneypot={setHoneypot}
                 handleSubmit={handleSubmit}
               />
             )}

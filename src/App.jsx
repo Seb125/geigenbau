@@ -10,6 +10,7 @@ import Kontakt from './pages/Kontakt';
 import HeaderLayout from "./components/HeaderLayout";
 import Impressum from './pages/Impressum';
 import Test from "./pages/test";
+import Datenschutz from './pages/Datenschutz';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -20,7 +21,8 @@ function App() {
     <Routes>
         
         <Route path='/' element={<HeaderLayout><MainPage/></HeaderLayout>}/>
-        <Route path='/impressum' element={<Impressum/>}/>
+        <Route path='/impressum' element={<HeaderLayout><Impressum/></HeaderLayout>}/>
+        <Route path='/datenschutz' element={<HeaderLayout><Datenschutz/></HeaderLayout>}  />
         <Route path='/test' element={<Test/>}/>
 
         <Route path='/handel' element={<HeaderLayout><Handel /></HeaderLayout>}/>

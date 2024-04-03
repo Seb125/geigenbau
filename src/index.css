@@ -47,6 +47,9 @@
     text-decoration: none;
   }
 
+  #datenschutz.text-container-two {
+    width: 60%;
+  }
  
 .footer {
   color: rgb(0, 0, 0);
