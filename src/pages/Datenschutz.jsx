@@ -3,16 +3,21 @@ import Footer from "../components/Footer";
 function Datenschutz() {
   return (
     <div className="position-relative">
-      <div className="container-fluid bg-no-repeat bg-cover position-relative background-container">
+      <div
+        id="longDataContainer"
+        className="container-fluid bg-no-repeat bg-cover position-relative background-container"
+      >
         <div className="overlay-two"></div>
         <div className="d-flex flex-row justify-content-center align-items-center">
           <div
             id="datenschutz"
-            className="d-flex flex-column align-items-center justify-content-center m-5 position-relative text-container-two col-4"
+            className="d-flex flex-column justify-content-center m-5 position-relative text-container-two col-4"
           >
-            <h2>Datenschutzerklärung</h2>
-            <p className="mt-5">
-              <h4>Datenschutz</h4>
+            <div className="text-center">
+              <h2>Datenschutzerklärung</h2>
+            </div>
+            <h4 className="mt-5">Datenschutz</h4>
+            <p>
               Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen
               Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten
               vertraulich und entsprechend der gesetzlichen
@@ -41,9 +46,8 @@ function Datenschutz() {
               die Daten, die Sie an uns übermitteln, nicht von Dritten
               mitgelesen werden.
             </p>
-
+            <h4>Recht auf Auskunft, Löschung, Sperrung</h4>
             <p>
-              <h4>Recht auf Auskunft, Löschung, Sperrung</h4>
               Sie haben jederzeit das Recht auf unentgeltliche Auskunft über
               Ihre gespeicherten personenbezogenen Daten, deren Herkunft und
               Empfänger und den Zweck der Datenverarbeitung sowie ein Recht auf
@@ -52,9 +56,8 @@ function Datenschutz() {
               jederzeit unter der im Impressum angegebenen Adresse an uns
               wenden.
             </p>
-
+            <h4>Widerspruch Werbe-Mails</h4>
             <p>
-              <h4>Widerspruch Werbe-Mails</h4>
               Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten
               Kontaktdaten zur Übersendung von nicht ausdrücklich angeforderter
               Werbung und Informationsmaterialien wird hiermit widersprochen.
@@ -64,7 +67,7 @@ function Datenschutz() {
             </p>
           </div>
         </div>
-        <div className="position-relative mt-5">
+        <div className="position-relative ">
           <Footer />
         </div>
       </div>
