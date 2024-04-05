@@ -27,8 +27,9 @@ function Neubau() {
               }}
             />
           </div>
-          <Carousel images={images} />
-
+            <Carousel images={images} />
+          
+          
           <div className="d-flex flex-column justify-content-center mt-4">
                 <span>
                 Neben Restaurationen und Reparaturen werden kontinuierlich neue Geigen, Bratschen und Celli gebaut.

@@ -10,7 +10,7 @@ function CarouselIndicators({ images, activeIndex, onClick }) {
             index === activeIndex ? 'active' : ''
           }`}
           onClick={() => onClick(index)}
-        />
+        >&nbsp;</span>
       ))}
     </div>
   )

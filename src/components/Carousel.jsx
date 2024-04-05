@@ -39,6 +39,7 @@ function Carousel ({ images, interval = 6000 }) {
   };
 
   return (
+    <div className='d-flex flex-column align-items-center justify-content-center'>
     <div className="carousel">
       <button onClick={prevSlide} className="carousel__btn carousel__btn--prev">
         &lt;
@@ -63,6 +64,7 @@ function Carousel ({ images, interval = 6000 }) {
       <button onClick={nextSlide} className="carousel__btn carousel__btn--next">
         &gt;
       </button>
+    </div>
       <CarouselIndicators
         images={images}
         activeIndex={activeIndex}
